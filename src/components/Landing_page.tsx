@@ -3,7 +3,7 @@ import star from "../assets/star.png";
 export default function OpeningPage() {
   return (
     <div
-      className="w-full h-screen flex flex-col md:flex-row items-center justify-center"
+      className="w-full min-h-[100dvh] flex flex-col md:flex-row items-center justify-center overflow-hidden"
       style={{
         background: "linear-gradient(to right, #1DA1F2, #6C3CF0, #FF2D95)",
       }}
