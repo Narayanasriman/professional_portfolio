@@ -42,26 +42,26 @@ const educationList: Education[] = [
   },
 ];
 
-function CategoryBadge({ label }: { label: string }) {
-  return (
-    <span
-      style={{
-        background: "rgba(0,0,0,0.45)",
-        border: "1px solid rgba(255,255,255,0.2)",
-        borderRadius: "4px",
-        padding: "2px 10px",
-        fontSize: "11px",
-        fontWeight: 700,
-        letterSpacing: "0.08em",
-        color: "#e0e0e0",
-        textTransform: "uppercase" as const,
-        backdropFilter: "blur(4px)",
-      }}
-    >
-      {label}
-    </span>
-  );
-}
+// function CategoryBadge({ label }: { label: string }) {
+//   return (
+//     <span
+//       style={{
+//         background: "rgba(0,0,0,0.45)",
+//         border: "1px solid rgba(255,255,255,0.2)",
+//         borderRadius: "4px",
+//         padding: "2px 10px",
+//         fontSize: "11px",
+//         fontWeight: 700,
+//         letterSpacing: "0.08em",
+//         color: "#e0e0e0",
+//         textTransform: "uppercase" as const,
+//         backdropFilter: "blur(4px)",
+//       }}
+//     >
+//       {label}
+//     </span>
+//   );
+// }
 
 function CoursePill({ name }: { name: string }) {
   return (
