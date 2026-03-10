@@ -1,6 +1,18 @@
 import star from "../assets/star.png";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function OpeningPage() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/profiles");
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <div
       className="w-full min-h-[100dvh] flex flex-col md:flex-row items-center justify-center overflow-hidden"
