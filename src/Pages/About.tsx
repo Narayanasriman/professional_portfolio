@@ -18,19 +18,16 @@ export default function About() {
           display: flex;
           align-items: center;
           justify-content: center;
-          /* ✅ NO overflow:hidden — was collapsing sidebar */
           padding: 60px 48px;
           position: relative;
+          overflow: hidden;
           font-family: 'Mulish', sans-serif;
         }
 
-        /* Ambient blobs — use pseudo on inner wrapper, NOT root, to avoid overflow issues */
         .hero-blob-tl {
           position: absolute;
-          top: -100px;
-          left: -100px;
-          width: 420px;
-          height: 420px;
+          top: -100px; left: -100px;
+          width: 420px; height: 420px;
           background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
           border-radius: 50%;
           pointer-events: none;
@@ -39,10 +36,8 @@ export default function About() {
 
         .hero-blob-br {
           position: absolute;
-          bottom: -80px;
-          right: -80px;
-          width: 340px;
-          height: 340px;
+          bottom: -80px; right: -80px;
+          width: 340px; height: 340px;
           background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
           border-radius: 50%;
           pointer-events: none;
@@ -56,6 +51,7 @@ export default function About() {
           max-width: 1000px;
           width: 100%;
           position: relative;
+          overflow: hidden;
           z-index: 1;
         }
 
@@ -63,6 +59,7 @@ export default function About() {
         .hero-image-wrap {
           flex-shrink: 0;
           position: relative;
+          overflow: hidden;
           width: 280px;
         }
 
@@ -92,14 +89,14 @@ export default function About() {
           border-radius: 20px;
           display: block;
           position: relative;
+          overflow: hidden;
           z-index: 2;
           filter: saturate(0.9) contrast(1.05);
         }
 
         .status-dot {
           position: absolute;
-          bottom: 16px;
-          right: -12px;
+          bottom: 16px; right: -12px;
           z-index: 3;
           background: #0f172a;
           border: 1px solid rgba(255,255,255,0.1);
@@ -116,8 +113,7 @@ export default function About() {
         }
 
         .dot-pulse {
-          width: 8px;
-          height: 8px;
+          width: 8px; height: 8px;
           border-radius: 50%;
           background: #22c55e;
           animation: pulse 2s ease-in-out infinite;
@@ -135,7 +131,7 @@ export default function About() {
           display: flex;
           flex-direction: column;
           gap: 18px;
-          min-width: 0; /* ✅ prevents flex child overflow stretching sidebar */
+          min-width: 0;
         }
 
         .hero-tag {
@@ -177,14 +173,10 @@ export default function About() {
           color: #475569;
         }
 
-        .hero-designation em {
-          font-style: normal;
-          color: #7c3aed;
-        }
+        .hero-designation em { font-style: normal; color: #7c3aed; }
 
         .hero-divider {
-          width: 38px;
-          height: 2px;
+          width: 38px; height: 2px;
           background: linear-gradient(90deg, #3b82f6, transparent);
           border-radius: 2px;
         }
@@ -196,64 +188,35 @@ export default function About() {
           font-weight: 400;
         }
 
-        .hero-desc strong {
-          color: #94a3b8;
-          font-weight: 600;
-        }
+        .hero-desc strong { color: #94a3b8; font-weight: 600; }
 
-        /* Stats */
-        .stats-row {
-          display: flex;
-          gap: 24px;
-        }
+        .stats-row { display: flex; gap: 24px; }
 
-        .stat-item {
-          display: flex;
-          flex-direction: column;
-          gap: 2px;
-        }
+        .stat-item { display: flex; flex-direction: column; gap: 2px; }
 
         .stat-value {
           font-family: 'Syne', sans-serif;
-          font-size: 21px;
-          font-weight: 800;
-          color: #f1f5f9;
-          letter-spacing: -0.02em;
+          font-size: 21px; font-weight: 800;
+          color: #f1f5f9; letter-spacing: -0.02em;
         }
 
         .stat-label {
-          font-size: 10.5px;
-          color: #475569;
-          font-weight: 600;
-          letter-spacing: 0.06em;
+          font-size: 10.5px; color: #475569;
+          font-weight: 600; letter-spacing: 0.06em;
           text-transform: uppercase;
         }
 
-        .stat-sep {
-          width: 1px;
-          height: 34px;
-          background: rgba(255,255,255,0.07);
-          align-self: center;
-        }
+        .stat-sep { width: 1px; height: 34px; background: rgba(255,255,255,0.07); align-self: center; }
 
-        /* Social */
-        .social-row {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
+        .social-row { display: flex; align-items: center; gap: 10px; }
 
         .social-icon {
-          width: 36px;
-          height: 36px;
+          width: 36px; height: 36px;
           border-radius: 9px;
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.08);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #64748b;
-          text-decoration: none;
+          display: flex; align-items: center; justify-content: center;
+          color: #64748b; text-decoration: none;
           transition: all 0.2s ease;
         }
 
@@ -264,62 +227,35 @@ export default function About() {
           transform: translateY(-2px);
         }
 
-        /* Buttons */
-        .btn-row {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          flex-wrap: wrap;
-        }
+        .btn-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
         .btn-connect {
-          display: inline-flex;
-          align-items: center;
-          gap: 7px;
+          display: inline-flex; align-items: center; gap: 7px;
           background: linear-gradient(135deg, #25d366, #128c7e);
-          color: #fff;
-          border: none;
-          border-radius: 10px;
+          color: #fff; border: none; border-radius: 10px;
           padding: 11px 22px;
           font-family: 'Mulish', sans-serif;
-          font-size: 13px;
-          font-weight: 700;
-          cursor: pointer;
-          text-decoration: none;
+          font-size: 13px; font-weight: 700;
+          cursor: pointer; text-decoration: none;
           transition: all 0.2s ease;
           box-shadow: 0 4px 18px rgba(37,211,102,0.22);
         }
 
-        .btn-connect:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 26px rgba(37,211,102,0.32);
-          opacity: 0.9;
-        }
+        .btn-connect:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(37,211,102,0.32); opacity: 0.9; }
 
         .btn-resume {
-          display: inline-flex;
-          align-items: center;
-          gap: 5px;
-          background: transparent;
-          color: #94a3b8;
+          display: inline-flex; align-items: center; gap: 5px;
+          background: transparent; color: #94a3b8;
           border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 10px;
-          padding: 11px 20px;
+          border-radius: 10px; padding: 11px 20px;
           font-family: 'Mulish', sans-serif;
-          font-size: 13px;
-          font-weight: 600;
-          cursor: pointer;
-          text-decoration: none;
+          font-size: 13px; font-weight: 600;
+          cursor: pointer; text-decoration: none;
           transition: all 0.2s ease;
         }
 
-        .btn-resume:hover {
-          background: rgba(255,255,255,0.05);
-          border-color: rgba(255,255,255,0.18);
-          color: #e2e8f0;
-        }
+        .btn-resume:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.18); color: #e2e8f0; }
 
-        /* Fade-in */
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(16px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -332,16 +268,74 @@ export default function About() {
         .fade-5 { animation: fadeUp 0.55s ease both 0.45s; }
         .fade-6 { animation: fadeUp 0.55s ease both 0.55s; }
         .fade-7 { animation: fadeUp 0.55s ease both 0.65s; }
+
+        /* ── MOBILE overrides ── */
+        @media (max-width: 767px) {
+          .hero-root {
+            min-height: unset;
+            height: auto;
+            padding: 16px 16px 80px;
+            align-items: flex-start;
+          }
+          .hero-inner {
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+          }
+          .hero-image-wrap {
+            width: 90px;
+            margin: 0 auto;
+          }
+          .hero-img {
+            width: 90px;
+            height: 110px;
+            border-radius: 12px;
+          }
+          .hero-image-wrap::before { border-radius: 14px; inset: -3px; }
+          .hero-image-wrap::after  { border-radius: 13px; }
+          .status-dot {
+            right: -6px; bottom: 6px;
+            font-size: 9px;
+            padding: 3px 7px 3px 5px;
+            gap: 4px;
+          }
+          .dot-pulse { width: 6px; height: 6px; }
+          .hero-content {
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+            width: 100%;
+          }
+          .hero-tag { font-size: 9px; padding: 3px 10px; }
+          .hero-name { font-size: 28px; line-height: 1.05; }
+          .hero-designation { font-size: 11px; }
+          .hero-divider { margin: 0 auto; width: 28px; height: 2px; }
+          .hero-desc { font-size: 11px; line-height: 1.55; text-align: center; }
+          .stats-row { justify-content: center; gap: 14px; }
+          .stat-value { font-size: 16px; }
+          .stat-label { font-size: 8.5px; }
+          .stat-sep   { height: 26px; }
+          .social-row { justify-content: center; gap: 8px; }
+          .social-icon { width: 34px; height: 34px; border-radius: 8px; }
+          .btn-row { flex-direction: row; width: 100%; gap: 8px; }
+          .btn-connect, .btn-resume {
+            flex: 1;
+            justify-content: center;
+            padding: 9px 10px;
+            font-size: 11px;
+            border-radius: 8px;
+            gap: 4px;
+          }
+        }
       `}</style>
 
       <section className="hero-root">
-        {/* Blobs as siblings, not pseudo — avoids overflow:hidden need */}
         <div className="hero-blob-tl" />
         <div className="hero-blob-br" />
 
         <div className="hero-inner">
 
-          {/* LEFT */}
+          {/* LEFT — Profile image */}
           <div className="hero-image-wrap fade-1">
             <img src={ProfileImg} alt="Sriman Narayana" className="hero-img" />
             <div className="status-dot">
@@ -350,7 +344,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* RIGHT */}
+          {/* RIGHT — Content */}
           <div className="hero-content">
 
             <div className="hero-tag fade-2">
@@ -416,12 +410,12 @@ export default function About() {
                 Connect on WhatsApp
               </a>
               <button
-  className="btn-resume"
-  onClick={() => window.open(resume, "_blank")}
->
-  View Resume
-  <ArrowUpRight size={13} />
-</button>
+                className="btn-resume"
+                onClick={() => window.open(resume, "_blank")}
+              >
+                View Resume
+                <ArrowUpRight size={13} />
+              </button>
             </div>
 
           </div>
